@@ -28,6 +28,86 @@ DB Browser for SQLite / MySQL Workbench (Any SQL-compatible tool works).
 | department_name | VARCHAR(100) | NOT NULL     |
 | location        | VARCHAR(100) |              |
 
+##  Insert Sample Data
+
+-- Insert into Employees
+INSERT INTO Employees (emp_id, emp_name, department_id, city) VALUES
+(1, 'Yash', 101, 'Mumbai'),
+(2, 'Raj', 102, 'Pune'),
+(3, 'Priya', NULL, 'Delhi'),
+(4, 'Amit', 101, 'Mumbai'),
+(5, 'Neha', 103, 'Chennai');
+
+-- Insert into Departments
+INSERT INTO Departments (department_id, department_name, location) VALUES
+(101, 'IT', 'Mumbai'),
+(102, 'HR', 'Pune'),
+(104, 'Finance', 'Delhi');
+
+## 📊 Data Preview
+
+### Employees Table
+| emp_id | emp_name | department_id | city    |
+|--------|----------|---------------|---------|
+| 1      | Yash     | 101           | Mumbai  |
+| 2      | Raj      | 102           | Pune    |
+| 3      | Priya    | NULL          | Delhi   |
+| 4      | Amit     | 101           | Mumbai  |
+| 5      | Neha     | 103           | Chennai |
+
+### Departments Table
+| department_id | department_name | location |
+|---------------|-----------------|----------|
+| 101           | IT              | Mumbai   |
+| 102           | HR              | Pune     |
+| 104           | Finance         | Delhi    |
+
+
+## INNER JOIN 
+
+SELECT e.emp_id, e.emp_name, d.department_name, d.location
+FROM Employees AS e
+INNER JOIN Departments AS d
+    ON e.department_id = d.department_id;
+![inner](https://github.com/user-attachments/assets/2c5d905f-1c7e-4b67-84c3-c1a01f47500d)
+
+## LEFT JOIN
+SELECT e.emp_id, e.emp_name, d.department_name, d.location
+FROM Employees AS e
+LEFT JOIN Departments AS d
+    ON e.department_id = d.department_id;
+![left](https://github.com/user-attachments/assets/13d2ec6c-adee-420c-827f-84cd96b6641c)
+
+##RIGHT JOIN
+SELECT e.emp_id, e.emp_name, d.department_name, d.location
+FROM Employees AS e
+RIGHT JOIN Departments AS d
+    ON e.department_id = d.department_id;
+![right](https://github.com/user-attachments/assets/ad8f68b3-e362-49df-a4b7-5a13ac756cdf)
+
+#FULL OUTER JOIN
+SELECT e.emp_id, e.emp_name, d.department_name, d.location
+FROM Employees AS e
+LEFT JOIN Departments AS d
+    ON e.department_id = d.department_id
+UNION
+SELECT e.emp_id, e.emp_name, d.department_name, d.location
+FROM Employees AS e
+RIGHT JOIN Departments AS d
+    ON e.department_id = d.department_id;
+
+![full](https://github.com/user-attachments/assets/a5ac91eb-8bd5-43b2-bcf5-99d8cd3f8bb4)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
