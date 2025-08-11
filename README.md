@@ -72,6 +72,7 @@ INSERT INTO Departments (department_id, department_name, location) VALUES
 ![left](https://github.com/user-attachments/assets/13d2ec6c-adee-420c-827f-84cd96b6641c)
 
 ##RIGHT JOIN
+
 ![right](https://github.com/user-attachments/assets/ad8f68b3-e362-49df-a4b7-5a13ac756cdf)
 
 ##FULL OUTER JOIN
