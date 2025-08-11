@@ -1,14 +1,17 @@
 
 
-#📌 Task
+## 📌 Task
+
 Create two related tables (Employees & Departments) and demonstrate all types of SQL joins — INNER, LEFT, RIGHT, and FULL OUTER JOIN — to combine data.
 
-#🎯 Objective
+## 🎯 Objective
+
 Understand how to merge data from multiple tables.
 Learn the differences between each join type.
 Practice writing join queries in SQL.
 
-#🛠 Tools Used
+## 🛠 Tools Used
+
 DB Browser for SQLite / MySQL Workbench (Any SQL-compatible tool works).
 
 ## 📋 Table Structures
